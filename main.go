@@ -8,13 +8,16 @@ import (
 	"os/exec"
 
 	plugin "github.com/hashicorp/go-plugin"
-	"github.com/jen20/london-go/greeting"
+
+	"github.com/veeruns/rpcserver/london-go/greeting"
 )
 
 func main() {
 	language := "english"
+	//argu := "Test"
 	if len(os.Args) > 1 {
 		language = os.Args[1]
+		//	argu = strings.Join(os.Args[2:], ",")
 	}
 
 	// Note this is BAD, but demonstrates the concept.
@@ -50,5 +53,6 @@ func main() {
 	// We should have a Greeter now! This feels like a normal interface
 	// implementation but is in fact over an RPC connection.
 	greeter := raw.(greeting.Greeter)
-	fmt.Println(greeter.Greet())
+
+	fmt.Printf("%s\n", greeter.Greet("TEST"))
 }

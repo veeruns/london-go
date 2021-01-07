@@ -1,6 +1,9 @@
 package greeting
 
-import "net/rpc"
+import (
+	"fmt"
+	"net/rpc"
+)
 
 type GreeterRPC struct{ client *rpc.Client }
 
@@ -10,6 +13,7 @@ func (g *GreeterRPC) Greet(input string) string {
 	if err != nil {
 		// You usually want your interfaces to return errors. If they don't,
 		// there isn't much other choice here.
+		fmt.Printf("%s\n", resp)
 		panic(err)
 	}
 
