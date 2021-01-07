@@ -7,8 +7,8 @@ type GreeterRPCServer struct {
 	Impl Greeter
 }
 
-func (s *GreeterRPCServer) Greet(args interface{}, resp *string) error {
-	str := fmt.Sprintf("%v", args)
+func (s *GreeterRPCServer) Greet(args string, resp *string) error {
+	str := fmt.Sprintf("%v ", args)
 	*resp = s.Impl.Greet(str)
 	return nil
 }

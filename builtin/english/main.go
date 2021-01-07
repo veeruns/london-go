@@ -25,5 +25,6 @@ func main() {
 type GreeterEnglish struct{}
 
 func (GreeterEnglish) Greet(a string) string {
+	fmt.Printf("A is %a\n", a)
 	return fmt.Sprintf("Hi: %s", a)
 }
