@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/hashicorp/go-plugin"
-	"github.com/jen20/london-go/greeting"
+	"github.com/veeruns/rpcserver/london-go/greeting"
 )
 
 func main() {
