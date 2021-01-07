@@ -6,6 +6,6 @@ type GreeterRPCServer struct {
 }
 
 func (s *GreeterRPCServer) Greet(args interface{}, resp *string) error {
-	*resp = s.Impl.Greet()
+	*resp = s.Impl.Greet(args.(string))
 	return nil
 }
