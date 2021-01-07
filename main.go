@@ -53,6 +53,6 @@ func main() {
 	// We should have a Greeter now! This feels like a normal interface
 	// implementation but is in fact over an RPC connection.
 	greeter := raw.(greeting.Greeter)
-
-	fmt.Printf("%s\n", greeter.Greet("TEST"))
+	test := greeter.Greet("TEST TEST")
+	fmt.Printf("%s\n", test)
 }

@@ -7,4 +7,4 @@ require (
 	github.com/jen20/london-go v0.0.0-20170117122103-3f9d965246d5
 )
 
-replace "github.com/jen20/london-go/greeting" => "../greeting"
+replace "github.com/veeruns/rpcserver/london-go/greeting" => "../greeting"
